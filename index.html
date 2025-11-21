@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <title>GLauncher &mdash; Group App Launcher for Windows</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="GLauncher lets you group Windows apps and launch them together in one click. Perfect for gamers, sim racers, sim flyers, coders, admins and anyone who opens the same set of apps every day."
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  </head>
+  <body class="h-full bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased">
+    <div id="app" class="min-h-screen flex flex-col">
+      <header class="border-b border-slate-200/60 dark:border-slate-800/80 bg-white/70 dark:bg-slate-950/70 backdrop-blur">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-blue-600/40">
+              G
+            </div>
+            <div class="flex flex-col leading-tight">
+              <span class="font-semibold text-base sm:text-lg tracking-tight">GLauncher</span>
+              <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Group app launcher for Windows</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <nav class="hidden md:flex items-center gap-5 text-sm text-slate-600 dark:text-slate-300">
+              <a href="#what" class="hover:text-blue-600 dark:hover:text-blue-400">What it is</a>
+              <a href="#who" class="hover:text-blue-600 dark:hover:text-blue-400">Who it's for</a>
+              <a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400">Features</a>
+              <a href="#download" class="hover:text-blue-600 dark:hover:text-blue-400">Download</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1">
+        <section class="border-b border-slate-200/60 dark:border-slate-800/80 bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900" id="hero">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6">
+              <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+                Launch all your apps
+                <span class="text-blue-600 dark:text-blue-400">as a group</span>.
+              </h1>
+              <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl">
+                GLauncher is a small Windows app that lets you group programs together and start them all at once.
+                No more clicking through the same shortcuts every day.
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+                <li>Create named groups for gaming, sim racing, coding, admin work, office setups and more.</li>
+                <li>Control launch order, pass developer flags and run apps as administrator per app.</li>
+                <li>Curated app detection plus search, Windows autostart option, light/dark mode and tray support.</li>
+              </ul>
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
+                <a
+                  href="downloads/GLauncher-Setup.exe"
+                  @click="trackDownload('windowsExe')"
+                  class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/40 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-950 transition"
+                >
+                  Download for Windows
+                </a>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Windows 10/11 &middot; Installer will live at
+                  <span class="font-mono text-[0.7rem]">/downloads/GLauncher-Setup.exe</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-500/20 via-sky-400/10 to-purple-500/10 blur-2xl"></div>
+              <div class="relative rounded-2xl border border-slate-200/70 dark:border-slate-700/80 bg-black shadow-xl shadow-slate-900/20 overflow-hidden">
+                <img
+                  src="_docs/screenshots/Screenshot 2025-11-20 at 8.40.35 PM.png"
+                  alt="Screenshot of the GLauncher Windows app"
+                  class="w-full h-auto block"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="what" class="border-b border-slate-200/60 dark:border-slate-800/80 bg-white dark:bg-slate-950">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 grid md:grid-cols-[1.2fr,1fr] gap-10 items-start">
+            <div class="space-y-4">
+              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">What is GLauncher?</h2>
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
+                GLauncher is a lightweight helper for Windows that focuses on one thing: opening the right set of
+                applications together so you can get into your flow faster.
+              </p>
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
+                Instead of hunting through the Start menu or taskbar, you define groups like
+                "Sim racing", "Dev environment" or "Morning office" and launch them in a single click.
+              </p>
+            </div>
+            <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
+                <div class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">Highlights</div>
+                <ul class="mt-2 space-y-1.5">
+                  <li>Group any desktop apps together, including custom executables.</li>
+                  <li>Use a curated app list or search and add your own programs.</li>
+                  <li>Control launch order, add command-line flags and force admin per app.</li>
+                  <li>Start with Windows, minimize to tray and choose light or dark theme.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="who" class="border-b border-slate-200/60 dark:border-slate-800/80 bg-slate-50 dark:bg-slate-950/90">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 mb-6">
+              Who is it for?
+            </h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4">
+                <div class="font-medium mb-1 text-slate-900 dark:text-slate-50">Gamers</div>
+                <p class="text-slate-600 dark:text-slate-300">Launch your game, voice chat, overlays and tools in one go.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4">
+                <div class="font-medium mb-1 text-slate-900 dark:text-slate-50">Sim racers & flyers</div>
+                <p class="text-slate-600 dark:text-slate-300">Sim, telemetry, crew chief, dashboards and button boxes together.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4">
+                <div class="font-medium mb-1 text-slate-900 dark:text-slate-50">Coders</div>
+                <p class="text-slate-600 dark:text-slate-300">Open your IDE, terminals, database tools and browser in a single click.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4">
+                <div class="font-medium mb-1 text-slate-900 dark:text-slate-50">Admins</div>
+                <p class="text-slate-600 dark:text-slate-300">Build groups for admin consoles, monitoring dashboards and scripts.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4">
+                <div class="font-medium mb-1 text-slate-900 dark:text-slate-50">Office workflows</div>
+                <p class="text-slate-600 dark:text-slate-300">Launch mail, chats, documents and line-of-business tools together.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4">
+                <div class="font-medium mb-1 text-slate-900 dark:text-slate-50">Anyone with a routine</div>
+                <p class="text-slate-600 dark:text-slate-300">If you open the same apps regularly, a group launcher can save you time.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="border-b border-slate-200/60 dark:border-slate-800/80 bg-white dark:bg-slate-950">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 grid md:grid-cols-2 gap-10 items-start">
+            <div class="space-y-4">
+              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">Key features</h2>
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
+                GLauncher focuses on control and convenience without trying to be an entire desktop environment.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 gap-3 text-sm text-slate-600 dark:text-slate-300">
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
+                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Group-based launching</div>
+                <p>Create as many groups as you like and launch them from the tray or main window.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
+                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Launch order</div>
+                <p>Control the order your apps start in, with delays where you need them.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
+                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Developer flags & admin</div>
+                <p>Attach command-line flags and choose to run specific apps as administrator.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
+                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Smart app detection</div>
+                <p>Start from a curated list of common programs, then search and add your own executables.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
+                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Start with Windows</div>
+                <p>Optionally run GLauncher on login so your groups are always one click away.</p>
+              </div>
+              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
+                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Light/dark mode & tray</div>
+                <p>Pick the theme you like and keep GLauncher tucked away in the Windows tray.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="download" class="bg-slate-50 dark:bg-slate-950/90">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
+            <div class="space-y-4">
+              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">Download GLauncher</h2>
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
+                The download button below points to a file inside this repository. Place your Windows installer at
+                <span class="font-mono text-[0.8rem]">/downloads/GLauncher-Setup.exe</span> when you're ready.
+              </p>
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                <a
+                  href="downloads/GLauncher-Setup.exe"
+                  @click="trackDownload('windowsExe')"
+                  class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/40 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-950 transition"
+                >
+                  Download for Windows
+                </a>
+                <div class="text-xs text-slate-500 dark:text-slate-400 space-y-0.5">
+                  <div>Installer: GLauncher-Setup.exe</div>
+                  <div>Location: /downloads/ directory in this repo</div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4 text-sm text-slate-600 dark:text-slate-300">
+              <div class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Download notes</div>
+              <ol class="list-decimal list-inside space-y-1.5">
+                <li>Build or obtain your GLauncher Windows installer.</li>
+                <li>Place it in the <span class="font-mono text-[0.8rem]">downloads</span> folder in this repository.</li>
+                <li>Ensure the file name matches <span class="font-mono text-[0.8rem]">GLauncher-Setup.exe</span> (or update the link here).</li>
+                <li>Push your changes and GitHub Pages will serve the installer from this site.</li>
+              </ol>
+              <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+                Download click tracking can be wired into analytics or GitHub Releases if you want global counts.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-slate-200/60 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+          <div>&copy; 2025 GLauncher. All rights reserved.</div>
+          <div class="flex items-center gap-4">
+            <div v-if="downloadCounts.windowsExe &gt; 0">
+              Download clicks this session: {{ downloadCounts.windowsExe }}
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            downloadCounts: {
+              windowsExe: 0,
+            },
+          };
+        },
+        methods: {
+          trackDownload(label) {
+            if (this.downloadCounts[label] != null) {
+              this.downloadCounts[label] += 1;
+            }
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

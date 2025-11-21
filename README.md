@@ -11,24 +11,6 @@ GLauncher is ideal for:
 
 Anyone who regularly opens the same set of apps can save time by launching them as a group instead of starting each one individually.
 
----
-
-## Live site
-
-Once GitHub Pages is enabled for this repository, the site will be available at:
-
-```text
-https://<your-username>.github.io/GLauncher/
-```
-
-The site is a single static `index.html` file built with:
-
-- [Vue 3](https://vuejs.org/) (via CDN)
-- [Tailwind CSS](https://tailwindcss.com/) (via CDN)
-
-No build step is required.
-
----
 
 ## Downloading GLauncher
 
@@ -43,21 +25,7 @@ The **Download for Windows** buttons on the site point to the latest installer h
 
 GitHub Releases provides **download counts** for the installer asset.
 
-### How to publish a new version
 
-1. Build a new Windows installer for GLauncher, e.g. `GLauncher-Setup.exe`.
-2. Go to the releases page for the app repo:
-
-   - <https://github.com/PineStreetTechnology/GLauncher/releases>
-
-3. Create a new release (or edit an existing one):
-   - Set a tag, e.g. `v1.0.1`.
-   - Upload `GLauncher-Setup.exe` as a release asset.
-4. Publish the release.
-
-The website will automatically serve the latest installer from the `releases/latest` URL, so you don’t need to change the site when you publish new builds (as long as the asset is still named `GLauncher-Setup.exe`).
-
----
 
 ## Installing GLauncher (for users)
 
@@ -92,14 +60,3 @@ To (re)enable GitHub Pages for this repository:
 
 GitHub will build and host the site. After a few minutes it will show the public URL, which you can share as the official GLauncher download page.
 
----
-
-## Local development
-
-Because the site is a single static HTML file using CDN-based Vue and Tailwind, you can simply open `index.html` directly in a browser, or serve it with any static file server. No build tooling is required.
-
-If you customize the page:
-
-- Edit `index.html` for layout and content.
-- Commit and push to GitHub.
-- GitHub Pages will deploy the updated version automatically.

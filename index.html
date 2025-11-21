@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="GLauncher lets you group Windows apps and launch them together in one click. Perfect for gamers, sim racers, sim flyers, coders, admins and anyone who opens the same set of apps every day."
+      content="GLauncher lets you group Windows apps and launch them together in one click. Perfect for gamers, sim racers, sim flyers, coders, admins, office people etc. Anyone that has to open multiple apps each day or often."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      referrerpolicy="no-referrer"
     />
     <script>
       tailwind.config = {
@@ -20,9 +25,11 @@
       <header class="border-b border-slate-200/60 dark:border-slate-800/80 bg-white/70 dark:bg-slate-950/70 backdrop-blur">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
           <div class="flex items-center gap-3">
-            <div class="h-9 w-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-blue-600/40">
-              G
-            </div>
+            <img
+              src="_docs/logos/glauncher-logo-2.png"
+              alt="GLauncher logo"
+              class="h-9 w-auto rounded-md shadow-md shadow-blue-600/40 bg-slate-900"
+            />
             <div class="flex flex-col leading-tight">
               <span class="font-semibold text-base sm:text-lg tracking-tight">GLauncher</span>
               <span class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Group app launcher for Windows</span>
@@ -58,7 +65,7 @@
               </ul>
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
                 <a
-                  href="https://github.com/PineStreetTechnology/GLauncher/releases/latest/download/GLauncher-Setup.exe"
+                  href="https://github.com/PineStreetTechnology/GLauncher/releases/latest/download/GroupLauncher-Lite-2.0.1-Setup.zip"
                   @click="trackDownload('windowsExe')"
                   class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/40 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-950 transition"
                 >
@@ -146,36 +153,97 @@
 
         <section id="features" class="border-b border-slate-200/60 dark:border-slate-800/80 bg-white dark:bg-slate-950">
           <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 grid md:grid-cols-2 gap-10 items-start">
-            <div class="space-y-4">
-              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">Key features</h2>
+            <div class="space-y-5">
+              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 flex items-center gap-2">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm shadow-blue-600/40">
+                  <i class="fa-solid fa-bolt"></i>
+                </span>
+                <span>Key features</span>
+              </h2>
               <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-                GLauncher focuses on control and convenience without trying to be an entire desktop environment.
+                GLauncher focuses on control and convenience without trying to be an entire desktop environment. It
+                gives you just the right tools to get your whole setup open and ready in a couple of clicks.
               </p>
+              <div class="grid grid-cols-1 gap-3 text-sm text-slate-600 dark:text-slate-300">
+                <div class="rounded-xl border border-blue-100 dark:border-blue-900/60 bg-blue-50/70 dark:bg-blue-950/40 p-4 flex gap-3">
+                  <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm">
+                    <i class="fa-solid fa-layer-group text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Group-based launching</div>
+                    <p>Create as many groups as you like and launch them from the tray or main window.</p>
+                  </div>
+                </div>
+                <div class="rounded-xl border border-indigo-100 dark:border-indigo-900/60 bg-indigo-50/70 dark:bg-indigo-950/40 p-4 flex gap-3">
+                  <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white shadow-sm">
+                    <i class="fa-solid fa-list-ol text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Launch order & timing</div>
+                    <p>Control the order your apps start in and add delays where you need them.</p>
+                  </div>
+                </div>
+                <div class="rounded-xl border border-emerald-100 dark:border-emerald-900/60 bg-emerald-50/70 dark:bg-emerald-950/40 p-4 flex gap-3">
+                  <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-white shadow-sm">
+                    <i class="fa-solid fa-terminal text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Developer flags & admin</div>
+                    <p>Attach command-line flags and choose to run specific apps as administrator.</p>
+                  </div>
+                </div>
+                <div class="rounded-xl border border-sky-100 dark:border-sky-900/60 bg-sky-50/70 dark:bg-sky-950/40 p-4 flex gap-3">
+                  <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg bg-sky-600 text-white shadow-sm">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Smart app detection</div>
+                    <p>Start from a curated list of common programs, then search and add your own executables.</p>
+                  </div>
+                </div>
+                <div class="rounded-xl border border-amber-100 dark:border-amber-900/60 bg-amber-50/70 dark:bg-amber-950/40 p-4 flex gap-3">
+                  <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500 text-white shadow-sm">
+                    <i class="fa-solid fa-power-off text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Start with Windows</div>
+                    <p>Optionally run GLauncher on login so your groups are always one click away.</p>
+                  </div>
+                </div>
+                <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4 flex gap-3">
+                  <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 text-white shadow-sm">
+                    <i class="fa-solid fa-moon text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Theme & tray support</div>
+                    <p>Pick the app theme you like and keep GLauncher tucked away in the Windows tray.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="grid grid-cols-1 gap-3 text-sm text-slate-600 dark:text-slate-300">
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
-                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Group-based launching</div>
-                <p>Create as many groups as you like and launch them from the tray or main window.</p>
+            <div class="space-y-3">
+              <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-black shadow-xl shadow-slate-900/40 overflow-hidden">
+                <img
+                  src="_docs/screenshots/Screenshot 2025-11-20 at 8.40.07 PM.png"
+                  alt="GLauncher auto-detected apps list"
+                  class="w-full h-auto block"
+                />
               </div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
-                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Launch order</div>
-                <p>Control the order your apps start in, with delays where you need them.</p>
-              </div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
-                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Developer flags & admin</div>
-                <p>Attach command-line flags and choose to run specific apps as administrator.</p>
-              </div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
-                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Smart app detection</div>
-                <p>Start from a curated list of common programs, then search and add your own executables.</p>
-              </div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
-                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Start with Windows</div>
-                <p>Optionally run GLauncher on login so your groups are always one click away.</p>
-              </div>
-              <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/70 p-4">
-                <div class="font-medium text-slate-900 dark:text-slate-50 mb-1">Light/dark mode & tray</div>
-                <p>Pick the theme you like and keep GLauncher tucked away in the Windows tray.</p>
+              <div class="grid sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-black shadow-lg shadow-slate-900/40 overflow-hidden">
+                  <img
+                    src="_docs/screenshots/Screenshot 2025-11-20 at 8.40.41 PM.png"
+                    alt="Creating and managing app groups in GLauncher"
+                    class="w-full h-auto block"
+                  />
+                </div>
+                <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-black shadow-lg shadow-slate-900/40 overflow-hidden">
+                  <img
+                    src="_docs/screenshots/Screenshot 2025-11-20 at 8.42.00 PM.png"
+                    alt="GLauncher settings and preferences"
+                    class="w-full h-auto block"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -186,37 +254,46 @@
             <div class="space-y-4">
               <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">Download GLauncher</h2>
               <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-                The download button below always points to the latest installer published in
-                <a href="https://github.com/PineStreetTechnology/GLauncher/releases" class="text-blue-600 hover:text-blue-700">GitHub Releases</a>
-                for this project.
+                The primary button below downloads the Windows installer hosted in
+                <a href="https://github.com/PineStreetTechnology/GLauncher/releases" class="text-blue-600 hover:text-blue-700">GitHub Releases</a>.
+                You can also grab the v2.0.1 source code archive.
               </p>
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                <a
-                  href="https://github.com/PineStreetTechnology/GLauncher/releases/latest/download/GLauncher-Setup.exe"
-                  @click="trackDownload('windowsExe')"
-                  class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/40 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-950 transition"
-                >
-                  Download for Windows
-                </a>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://github.com/PineStreetTechnology/GLauncher/releases/latest"
+                    @click="trackDownload('windowsExe')"
+                    class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/40 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-950 transition"
+                  >
+                    Download for Windows
+                  </a>
+                  <!-- <a
+                    href="https://github.com/PineStreetTechnology/GLauncher/archive/refs/tags/v2.0.1.zip"
+                    class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+                  >
+                    Source code (.zip)
+                  </a> -->
+                </div>
                 <div class="text-xs text-slate-500 dark:text-slate-400 space-y-0.5">
-                  <div>Installer: GLauncher-Setup.exe</div>
-                  <div>Source: Latest asset in GitHub Releases</div>
+                  <div>Installer: GroupLauncher-Lite-2.0.1-Setup.zip (GitHub Releases asset)</div>
+                  <div>Source: v2.0.1 tag archive (source code zip)</div>
                 </div>
               </div>
             </div>
             <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 p-4 text-sm text-slate-600 dark:text-slate-300">
-              <div class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Download notes</div>
+              <div class="flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">
+                <i class="fa-solid fa-circle-down text-slate-400"></i>
+                <span>Download & install</span>
+              </div>
               <ol class="list-decimal list-inside space-y-1.5">
-                <li>Build or obtain your GLauncher Windows installer.</li>
-                <li>Create or edit a release in
-                  <a href="https://github.com/PineStreetTechnology/GLauncher/releases" class="text-blue-600 hover:text-blue-700">GitHub Releases</a>
-                  for this repo.
-                </li>
-                <li>Upload <span class="font-mono text-[0.8rem]">GLauncher-Setup.exe</span> as a release asset.</li>
-                <li>GitHub will host the installer and track download counts for you.</li>
+                <li>Click <span class="font-semibold">Download for Windows</span> above to open the latest GLauncher release.</li>
+                <li>On GitHub, download the <span class="font-mono text-[0.8rem]">GroupLauncher-Lite-2.0.1-Setup.zip</span> installer asset.</li>
+                <li>Once the download completes, open the file and follow the Windows installer steps.</li>
+                <li>If Windows SmartScreen appears, choose <span class="font-semibold">More info</span> &rarr; <span class="font-semibold">Run anyway</span> (if you trust the publisher).</li>
+                <li>Launch <span class="font-semibold">GLauncher</span> from the Start menu, create a group and add your apps.</li>
               </ol>
               <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
-                Download click tracking can be wired into analytics or GitHub Releases if you want global counts.
+                The installer is hosted on GitHub Releases by Pine Street Technology.
               </p>
             </div>
           </div>
@@ -225,7 +302,7 @@
 
       <footer class="border-t border-slate-200/60 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-          <div>&copy; 2025 GLauncher. All rights reserved.</div>
+          <div>&copy; 2025 GLauncher. All rights reserved. - Pine Street Technology</div>
           <div class="flex items-center gap-4">
             <div v-if="downloadCounts.windowsExe &gt; 0">
               Download clicks this session: {{ downloadCounts.windowsExe }}

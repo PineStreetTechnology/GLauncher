@@ -58,15 +58,14 @@
               </ul>
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
                 <a
-                  href="downloads/GLauncher-Setup.exe"
+                  href="https://github.com/PineStreetTechnology/GLauncher/releases/latest/download/GLauncher-Setup.exe"
                   @click="trackDownload('windowsExe')"
                   class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/40 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-950 transition"
                 >
                   Download for Windows
                 </a>
                 <p class="text-xs text-slate-500 dark:text-slate-400">
-                  Windows 10/11 &middot; Installer will live at
-                  <span class="font-mono text-[0.7rem]">/downloads/GLauncher-Setup.exe</span>
+                  Windows 10/11 &middot; Hosted via GitHub Releases
                 </p>
               </div>
             </div>
@@ -187,12 +186,13 @@
             <div class="space-y-4">
               <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">Download GLauncher</h2>
               <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-                The download button below points to a file inside this repository. Place your Windows installer at
-                <span class="font-mono text-[0.8rem]">/downloads/GLauncher-Setup.exe</span> when you're ready.
+                The download button below always points to the latest installer published in
+                <a href="https://github.com/PineStreetTechnology/GLauncher/releases" class="text-blue-600 hover:text-blue-700">GitHub Releases</a>
+                for this project.
               </p>
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                 <a
-                  href="downloads/GLauncher-Setup.exe"
+                  href="https://github.com/PineStreetTechnology/GLauncher/releases/latest/download/GLauncher-Setup.exe"
                   @click="trackDownload('windowsExe')"
                   class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-600/40 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-950 transition"
                 >
@@ -200,7 +200,7 @@
                 </a>
                 <div class="text-xs text-slate-500 dark:text-slate-400 space-y-0.5">
                   <div>Installer: GLauncher-Setup.exe</div>
-                  <div>Location: /downloads/ directory in this repo</div>
+                  <div>Source: Latest asset in GitHub Releases</div>
                 </div>
               </div>
             </div>
@@ -208,9 +208,12 @@
               <div class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Download notes</div>
               <ol class="list-decimal list-inside space-y-1.5">
                 <li>Build or obtain your GLauncher Windows installer.</li>
-                <li>Place it in the <span class="font-mono text-[0.8rem]">downloads</span> folder in this repository.</li>
-                <li>Ensure the file name matches <span class="font-mono text-[0.8rem]">GLauncher-Setup.exe</span> (or update the link here).</li>
-                <li>Push your changes and GitHub Pages will serve the installer from this site.</li>
+                <li>Create or edit a release in
+                  <a href="https://github.com/PineStreetTechnology/GLauncher/releases" class="text-blue-600 hover:text-blue-700">GitHub Releases</a>
+                  for this repo.
+                </li>
+                <li>Upload <span class="font-mono text-[0.8rem]">GLauncher-Setup.exe</span> as a release asset.</li>
+                <li>GitHub will host the installer and track download counts for you.</li>
               </ol>
               <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
                 Download click tracking can be wired into analytics or GitHub Releases if you want global counts.
